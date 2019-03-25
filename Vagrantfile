@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
 			v.name = "kube-node#{i}"
 
 			# 设置虚拟机的内存大小  
-			v.memory = 1024
+			v.memory = 1200
 
 			# 设置虚拟机的CPU个数
 			v.cpus = 1
