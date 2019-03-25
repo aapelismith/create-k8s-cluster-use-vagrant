@@ -30,5 +30,5 @@
 
 # 在 kube-node1 上执行
 
-`sudo kubeadm init --pod-network-cidr=172.16.0.0/24 --ignore-preflight-errors "NumCPU"  --apiserver-advertise-address="192.168.250.21" --apiserver-cert-extra-sans="192.168.250.21"`
+`sudo kubeadm init --pod-network-cidr=172.16.0.0/16 --ignore-preflight-errors "NumCPU"  --apiserver-advertise-address="192.168.250.21" --apiserver-cert-extra-sans="192.168.250.21"`
 
