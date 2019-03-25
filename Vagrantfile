@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
 		node.vm.provider "virtualbox" do |v|
 
 			# 设置虚拟机的名称
-			v.name = "node#{i}"
+			v.name = "kube-node#{i}"
 
 			# 设置虚拟机的内存大小  
 			v.memory = 1024
