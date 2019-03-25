@@ -31,18 +31,7 @@ Vagrant.configure("2") do |config|
   
 		# 使用shell脚本进行软件安装和配置
 		node.vm.provision "shell", inline: <<-SHELL
-			snap install docker
-			systemctl enable snap.docker.dockerd.service
-			usermod -aG root vagrant
-			cat >> /etc/hosts  << EOF		
-			192.168.250.21	kube-node1
-			192.168.250.22	kube-node2
-			192.168.250.23	kube-node3
-			EOF
-			snap install kubeadm --classic 
-			snap install kubectl --classic 	
-			snap install kubelet  --classic
-			systemctl enable snap.kubelet.daemon.service
+			echo -e  "\n192.168.250.21	kube-node1 \n192.168.250.22	kube-node2 \n192.168.250.23	kube-node3\n" >> /etc/hosts
 		SHELL
 
 		end
